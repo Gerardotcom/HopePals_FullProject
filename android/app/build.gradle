@@ -1,0 +1,40 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.hopepals_mex.v1"
+    compileSdk = flutter.compileSdkVersion
+    compileSdkVersion 34
+    ndkVersion = "25.1.8937393" // Establece la versión del NDK manualmente
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.hopepals_mex.v1"
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug // Asegúrate de tener tu propia configuración de firma para producción
+        }
+    }
+}
+
+flutter {
+    source = "../.." // Verifica que esta ruta sea correcta.
+}
