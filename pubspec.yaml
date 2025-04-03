@@ -1,0 +1,59 @@
+name: hopepals_game
+description: "HopePals"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.2.2  # Agrega esta línea para las solicitudes HTTP
+  flutter_bloc: ^8.0.0
+  sqflite: ^2.0.0+4
+  rive: ^0.13.15
+  flutter_svg: ^2.0.10
+  speech_to_text: ^7.0.0
+  flutter_tts: ^3.3.0
+  permission_handler: ^11.3.1
+  audioplayers: ^6.1.0
+  path_provider: ^2.0.11
+  archive: ^3.3.0
+  supabase_flutter: ^2.8.1
+  google_sign_in: ^6.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flame: ^1.2.0
+  shared_preferences: ^2.0.6
+
+flutter:
+  uses-material-design: true
+
+  # Añadir imágenes o cualquier recurso gráfico
+  assets:
+    - assets/images/FruitMerge/
+    - assets/HopePalm.png # Ruta de la imagen del logo que usarás como título en la pantalla de inicio
+    - assets/avaters/
+    - assets/Backgrounds/
+    - assets/icons/
+    - assets/RiveAssets/
+    - assets/images/
+    - assets/images/games/
+
+
+  fonts:
+    - family: Intel
+      fonts:
+        - asset: assets/Fonts/Inter-Regular.ttf
+        - asset: assets/Fonts/Inter-SemiBold.ttf
+          weight: 600
+    - family: Poppins
+      fonts:
+        - asset: assets/Fonts/Poppins-Bold.ttf
+          weight: 700
